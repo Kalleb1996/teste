@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+*, *::after, *::before{ /* usaremos os espaços antes e depois dos elementos! */
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* div principal: largura, altura, centralizar */
+/* div interna: largura, altura, cor de fundo, flutuação (depois com flexbox)*/
+
+#centro{
+	max-width: 100%;
+	width: 1440px;
+	overflow: hidden;
+	background-color: black;
+	margin: 0 auto;
+}
+.caixa{
+	width: 80%;
+	height: 100px;/* declaramos altura porque não podemos usar o overflow sem algum conteúdo dentro das caixas */
+	background-color: burlywood;
+	margin: 10px auto;
+}
+
+
+/* Consultas de largura dos dispositivos  */
+
+/* @media screen and (max-width: 320px){}  Esta medida já está resolvida no css acima*/
+
+
+@media screen and (min-width: 768px){
+	#centro{
+		background-color: blueviolet;	
+	}
+.caixa{
+	float: left;
+	width: 20%;
+	margin: 19px;
+	}
+}
+@media screen and (min-width: 1024px){
+	.caixa{
+		height: 300px;
+		margin: 25px;
+		background-color: cornflowerblue;
+	}
+	
+}
+@media screen and (min-width: 1440px){
+	.caixa{
+		width: 100px;
+		height: 100px;
+		background-color: orangered;
+	}
+	
+}
